@@ -148,6 +148,52 @@ echo ""
 echo "Installing RVM..."
 \curl -L https://get.rvm.io | bash
 
+
+echo ""
+echo ""
+
+
+# Install Juppir Security Stuff:
+# ---------------------------------------------------------------------------
+
+echo ""
+echo "Disable DMA support. Mitigate attack in tests performed."
+sudo kextunload /System/Library/Extensions/IOFireWireFamily.kext/Contents/PlugIns/AppleFWOHCI.kext
+
+echo ""
+echo "Clear Filevault keys when enter standby (sleep), which prevents access to data when sleeping."
+sudo pmset -a destroyfvkeyonstandby 1 hibernatemode 25
+
+echo ""
+echo "Disable Fast-User Switching to disallow multiple user session"
+sudo defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool 'NO'
+
+
+# Setup Wifi Connection
+# ---------------------------------------------------------------------------
+
+# echo ""
+# echo "Turning wifi off: so it will log you out from where you are currently connected."
+# networksetup -setairportpower en0 off
+# sleep 1
+
+# # re-enable wifi so we can actually use it
+# echo ""
+# echo "Re-enabling wifi, scanning for available hotspots..."
+# networksetup -setairportpower en0 on
+# /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport scan
+
+
+# echo ""
+# echo "Setting Up wifi connection:"
+# read -p "Select a Hotspot you'd like to join " HOTSPOT
+# read -p "Enter password " PASSWORD
+# networksetup -setairportnetwork en0 $HOTSPOT $PASSWORD
+
+
+# echo ""
+# echo "Done!"
+
 # Restart Terminal for RVM to take effect
 echo ""
 echo "bootstrapping complete! quitting terminal..."
