@@ -14,7 +14,7 @@ echo "    \  \:\    \  \:\       \  \::/       /__/:/         \__\/ \  \:\     "
 echo "     \__\/     \__\/        \__\/        \__\/                 \__\/     "
 echo ""
 echo "        ..........................................................       "
-echo "        . Dotfiles 0.1.1 (Pongstr) for setting up OSX Workspace  .       "
+echo "        . Dotfiles 0.1.2 (Pongstr) for setting up OSX Workspace  .       "
 echo "        .      https://github.com/pongstr/dotfiles.git           .       "
 echo "        ..........................................................       "
 echo ""
@@ -169,7 +169,7 @@ echo "Disable Fast-User Switching to disallow multiple user session"
 sudo defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool 'NO'
 
 
-# Setup Wifi Connection
+# Setup Wifi Connection: Uncomment to use
 # ---------------------------------------------------------------------------
 
 # echo ""
