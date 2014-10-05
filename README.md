@@ -11,10 +11,10 @@ version `0.1.1`
 
 ```bash
 # download latest from Github
-$ curl -L -O https://github.com/pongstr/dotfiles/archive/0.1.1.zip
+$ curl -L -O https://github.com/juppir/dotfiles/archive/master.zip
 
 # unzip the file and move to $HOME directory
-unzip 0.1.1.zip && mv dotfiles-0.1.1 ~/.dotfiles
+unzip master.zip && mv dotfiles-master ~/.dotfiles
 
 # run bootstrap!
 sh ~/.dotfiles/bootstrap.sh
