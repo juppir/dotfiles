@@ -1,7 +1,7 @@
 Dotfiles (Juppir)
 ========
 
-version `0.1.3`
+version `0.1.9`
 
 ### Requirements
 
@@ -11,10 +11,10 @@ version `0.1.3`
 
 ```bash
 # download latest from Github
-$ curl -L -O https://github.com/pongstr/dotfiles/archive/0.1.3.zip
+$ curl -L -O https://github.com/pongstr/dotfiles/archive/0.1.9.zip
 
 # unzip the file and move to $HOME directory
-unzip 0.1.3.zip && mv dotfiles-0.1.3 ~/.dotfiles
+unzip 0.1.9.zip && mv dotfiles-0.1.9 ~/.dotfiles
 
 # run bootstrap!
 sh ~/.dotfiles/bootstrap.sh
@@ -27,16 +27,17 @@ Once bootstrapped, you may run these dotfiles in any order except for:
 
 1. `.rvm`: installs and sets the specific version of ruby.
 2. `.gems`: if installed before `.rvm` it will fail because it will install to
-    the system's default path and you will need to `sudo` to install into it.
+    the system's default path which will require you to `sudo` and defeats the
+    purpose of not using it everytime.
 
 ```bash
-# Install `ruby-2.1.1` and set it as default
+# Install `ruby-2.2.0` and set it as default
 # Update `osx-ssl-certs` & install cron to auto-update it.
 $ ./.dotfiles/init/.rvm
 
 # You may need to execute `.rvm` first before `.gems` as it
 # will set the default version of ruby and all that stuff in
-# order to install your gems
+# order to install your specific-ruby-version gems
 $ ./.dotfiles/init/.gems
 ```
 
@@ -67,12 +68,13 @@ $ ./.dotfiles/init/.gituser
 $ ./.dotfiles/init/.shell
 
 
-# Setup vim
+# Setup vim, make it extra awesome..
 $ ./.dotfiles/init/.vim
 
 
-# Make OSX awesome, `sudo` is necessary for this to run.
+# OSX optimal awesome settings
 $ ./.dotfiles/init/.osx
+
 
 # Install fonts for coding and docs
 $ ./.dotfiles/init/.fonts
@@ -95,7 +97,7 @@ Vim Base-16 Color scheme
 
 #### Acknowledgements
 
-Inspiration and code was taken from may sources, including:
+Inspiration and code was taken from many sources, including:
 
   - [@mathiasbynens](https://github.com/mathiasbynens/dotfiles)
   - [@necolas](https://github.com/necolas/dotfiles)
