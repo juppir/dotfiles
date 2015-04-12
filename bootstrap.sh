@@ -193,8 +193,6 @@ sudo defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabl
 # read -p "Select a Hotspot you'd like to join " HOTSPOT
 # read -p "Enter password " PASSWORD
 # networksetup -setairportnetwork en0 $HOTSPOT $PASSWORD
-
-
 # echo ""
 # echo "Done!"
 
