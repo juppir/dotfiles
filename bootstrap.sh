@@ -167,7 +167,7 @@ echo ""
 echo ""
 
 
-# Install Juppir Security Stuff: Paranoia Pill
+# Install Juppir Security Stuff:
 # ---------------------------------------------------------------------------
 
 echo ""
