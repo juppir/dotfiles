@@ -162,7 +162,7 @@
 	<key>BlinkText</key>
 	<false/>
 	<key>CommandString</key>
-	<string>login -fpql pongstr /bin/zsh</string>
+	<string>login -fpql $(id -un) /bin/zsh</string>
 	<key>CursorBlink</key>
 	<true/>
 	<key>CursorColor</key>
